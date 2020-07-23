@@ -6,7 +6,7 @@ function App() {
   
   return (
     <ModalWrapper>
-      <div className = 'cards-container'>
+      <div className = 'cards-container-top'>
 
         <div className = 'card'>
           <img src = '' alt = '' />
@@ -27,6 +27,30 @@ function App() {
           <h3>Card Title</h3>
           <p>Card Text</p>
           <button onClick = {() => {document.getElementById('modal3').style.display = 'block'}} className = 'modal-open' data-modal = 'modal3'>Open Modal 3</button>
+        </div>
+
+      </div>
+      <div className = 'cards-container-bottom'>
+
+        <div className = 'card'>
+          <img src = '' alt = '' />
+          <h3>Card Title</h3>
+          <p>Card Text</p>
+          <button onClick = {() => {document.getElementById('modal4').style.display = 'block'}} className = 'modal-open' data-modal = 'modal4'>Open Modal 4</button>
+        </div>
+
+        <div className = 'card'>
+          <img src = '' alt = '' />
+          <h3>Card Title</h3>
+          <p>Card Text</p>
+          <button onClick = {() => {document.getElementById('modal5').style.display = 'block'}} className = 'modal-open' data-modal = 'modal5'>Open Modal 5</button>
+        </div>
+
+        <div className = 'card'>
+          <img src = '' alt = '' />
+          <h3>Card Title</h3>
+          <p>Card Text</p>
+          <button onClick = {() => {document.getElementById('modal6').style.display = 'block'}} className = 'modal-open' data-modal = 'modal6'>Open Modal 6</button>
         </div>
 
       </div>
@@ -82,6 +106,58 @@ function App() {
         </div>
       </div>
 
+
+      <div className = 'modal' id = 'modal4'>
+        <div className = 'modal-content'>
+          <div className = 'modal-header'>
+            Modal4
+            <button onClick = {() => {document.getElementById('modal4').style.display = 'none'}} class = 'modal-close'>X</button>
+          </div>
+          <div className = 'modal-body'>
+            Lorem ipsum dolor, sit amet consectetur ajss.
+          </div>
+          <div className = 'modal-footer'>
+            <button onClick = {() => {document.getElementById('modal4').style.display = 'none'}} class = 'link modal-close'>
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className = 'modal' id = 'modal5'>
+        <div className = 'modal-content'>
+          <div className = 'modal-header'>
+            Modal5
+            <button onClick = {() => {document.getElementById('modal5').style.display = 'none'}}class = 'modal-close'>X</button>
+          </div>
+          <div className = 'modal-body'>
+            Lorem ipsum dolor, sit amet consectetur ajss.
+          </div>
+          <div className = 'modal-footer'>
+            <button onClick = {() => {document.getElementById('modal5').style.display = 'none'}} class = 'link modal-close'>
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className = 'modal' id = 'modal6'>
+        <div className = 'modal-content'>
+          <div className = 'modal-header'>
+            Modal6
+            <button onClick = {() => {document.getElementById('modal6').style.display = 'none'}}class = 'modal-close'>X</button>
+          </div>
+          <div className = 'modal-body'>
+            Lorem ipsum dolor, sit amet consectetur ajss.
+          </div>
+          <div className = 'modal-footer'>
+            <button onClick = {() => {document.getElementById('modal6').style.display = 'none'}} class = 'link modal-close'>
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+
     </ModalWrapper>
   );
 }
@@ -89,17 +165,27 @@ function App() {
 export default App;
 
 const ModalWrapper = styled.div `
-
-  .cards-container {
+  background: lightgray;
+  .cards-container-top {
     display: flex;
     justify-content: center;
     .card {
       text-align: center;
       width: 25%;
       margin: 1%;
+      background: white;
     }
   }
-
+  .cards-container-bottom {
+    display: flex;
+    justify-content: center;
+    .card {
+      text-align: center;
+      width: 25%;
+      margin: 1%;
+      background: white;
+    }
+  }
   .modal-open {
     padding: 2% 5%;
     font-size: 1.6rem;
